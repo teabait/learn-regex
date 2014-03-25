@@ -55,13 +55,13 @@ var lessons = [
         name: 'Khan',
         enemy: true,
         killed: false,
-        img: 'monsters/monster2'
+        img: 'monsters/monster4'
       },
       {
         name: 'Sman',
         enemy: true,
         killed: false,
-        img: 'monsters/monster2b'
+        img: 'monsters/monster4b'
       }
     ]
   },
