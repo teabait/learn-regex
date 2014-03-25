@@ -84,20 +84,26 @@ var lessons = [
     ]
   },
   {
-    title: 'Great job! Lets learn something new',
-    instructions: 'Try and write a regex that matches both of these. Remember, <code>.</code> is a wildcard that will match any <i>single</i> character!',
+    title: 'Great job! It\'s time to defeat the final boss!',
+    instructions: 'You\'ve battled your way to Prince Cotter. He\'s being held captive by the monsters Bolter and Holker. Match Bolter and Holker, but be sure not to hit Cotter!',
     people: [
       {
-        name: 'Hlack',
+        name: 'Bolter',
         enemy: true,
         killed: false,
         img: 'monsters/monster1'
       },
       {
-        name: 'Slacy',
+        name: 'Holker',
         enemy: true,
         killed: false,
         img: 'monsters/monster1b'
+      },
+      {
+        name: 'Cotter',
+        enemy: false,
+        killed: false,
+        img: 'monsters/cotter'
       }
     ]
   }

@@ -21,6 +21,9 @@ $(function(){
       $('.pass').show();
     } else {
       $('.fail').show();
+      list.forEach(function(person){
+        person.killed = false;
+      })
     }
     setTimeout(function(){transition = true},100);
   }
