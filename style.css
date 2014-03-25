@@ -9,12 +9,12 @@ body {
     right: 0;
 }
 header {
-  text-align: center;
   font-family: 'Metal Mania', cursive;
   font-size: 35px;
 }
 
 .top-bar {
+  text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -22,9 +22,9 @@ header {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 .progress-bar {
-  margin-top: 25px;
   width: 100%;
   height: 10px;
   background: #ddd;
