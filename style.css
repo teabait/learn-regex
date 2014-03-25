@@ -1,5 +1,23 @@
+body {
+    background-color: gold;
+    font-family: 'Roboto Slab', serif;
+    color: rgba(90, 50, 0, 1);
+}
+header {
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+  font-size: 30px;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
 .container {
-  padding-top: 50px;
+  padding-top: 150px;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -19,17 +37,14 @@
 }
 
 .person-name {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 8px;
-  color: white;
   font-weight: bold;
 }
+
 .enemy-true .person-name {
-  background: red;
+  color: red;
 }
 .enemy-false .person-name {
-  background: green;
+  color: green;
 }
 
 .killed:after {
@@ -49,7 +64,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 99;
   color: #fff;
   color: white;
 }
@@ -90,6 +105,15 @@ code {
   font-size: 100px;
   color: red;
   font-family: 'impact';
-  padding-top: 100px;
+  padding-top: 300px;
+  z-index: 100;
 }
 
+header h1 {
+  border: none;
+}
+
+header h1:before, header h1:after {
+  content: " \2014 ";
+  margin-right: 20px;
+}
