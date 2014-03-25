@@ -1,0 +1,26 @@
+.enemy-true {
+  color: red;
+}
+
+.enemy-false {
+  color: green;
+}
+
+.killed {
+  text-decoration: line-through;
+}
+.flash{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: yellow;
+  display: none;
+  text-align: center;
+  font-size: 100px;
+  color: red;
+  font-family: 'impact';
+  padding-top: 100px;
+}
+
