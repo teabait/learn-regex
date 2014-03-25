@@ -11,7 +11,8 @@ $(function(){
       var result = person.name.match(regex);
       if(result == person.name){
         person.killed = true;
-        $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "]").addClass("killed");
+        var oldSrc = $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src');
+        $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrc + '-dead.png');
       }
     });
     $('.input').hide();
@@ -45,7 +46,11 @@ $(function(){
     $('input[type=text]').val('');
     $('#regex').focus();
     lesson.people.forEach(function(person){
-      $('.people').append("<li data-id='" + lesson.people.indexOf(person) + "' class='person enemy-"+ person.enemy + "'>" + person.name + "</li>");
+      var el = '<li data-id="'+lesson.people.indexOf(person)+'" class="person enemy-'+person.enemy+'">';
+      el += '<img src="'+person.img+'.png">';
+      el += '<br><span class="person-name">'+person.name+'</span>';
+      el += '</li>';
+      $('.people').append(el);
     });
   }
 
@@ -57,21 +62,14 @@ $(function(){
     renderLesson();
   }
 
-  // Proceed to next lesson
-  $('.next, .again').click(function(){
-    renderNextLesson();
-  });
-
+  // Move on to next lesson or try again
   $('body').on('keyup', function(e) {
     if (transition && e.keyCode === 13) {
       renderNextLesson();
     }
   });
 
-  // Check the code when someone clicks "submit"
-  $("#submit").click(function(){
-    checkRegex($('#regex').val(), $('#options').val(), lessons[currentLesson].people);
-  });
+  // Check the code when someone presses "enter"
   $('input[type=text]').on('keyup', function(e){
     if (e.keyCode === 13) {
       checkRegex($('#regex').val(), $('#options').val(), lessons[currentLesson].people);

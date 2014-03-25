@@ -1,12 +1,13 @@
 var lessons = [
   {
-    title: "Leran Regular Expressions by Slaying Monsters!",
-    instructions: '<p>RegEx is a powerful language that lets you search for patterns in text. We\'ll use it to defeat the evil creatures that stand between us and Prince Cotter, who\'s trapped in the cave.</p><p>Defeat your first enemy by typing it\'s name, <code>Zord</code>, below.</p>',
+    title: "Learn RegEx by Slaying Monsters!",
+    instructions: '<p>Regular Expressions (RegEx, for short) are powerful weapons that let you search for patterns in text. We\'ll use them in our quest to rescue Prince Cotter to match the name of the Monsters that are holding him captive!</p><p>Defeat your first enemy by typing it\'s name, <code>Zord</code>, below.</p>',
     people: [
       {
         name: 'Zord',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster1'
       }
     ]
   },
@@ -17,12 +18,14 @@ var lessons = [
       {
         name: 'Zord',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster1'
       },
       {
         name: 'Bord',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster1b'
       }
     ]
   },
@@ -33,12 +36,14 @@ var lessons = [
       {
         name: 'Zory',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster1'
       },
       {
         name: 'Zora',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster1b'
       }
     ]
   },
@@ -49,12 +54,14 @@ var lessons = [
       {
         name: 'Khan',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster2'
       },
       {
         name: 'Sman',
         enemy: true,
-        killed: false
+        killed: false,
+        img: 'monsters/monster2b'
       }
     ]
   }
