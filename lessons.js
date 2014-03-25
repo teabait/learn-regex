@@ -16,7 +16,7 @@ var lessons = [
     instructions: 'But let\'s be honest, it was pretty weak. This time, kill both enemies at once by typing <code>.ord</code>',
     people: [
       {
-        name: 'Zord',
+        name: 'Ford',
         enemy: true,
         killed: false,
         img: 'monsters/monster2'
