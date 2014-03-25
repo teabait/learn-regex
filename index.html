@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegEx Quest</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="lessons.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="flash">KABOOM!</div>
+
+  <div class="container">
+
+    <h1 class="lesson-title"></h1>
+    <div class="lesson-instructions"></div>
+    <ul class="people"></ul>
+
+    <div class="input">
+      / <input type="text" id="regex"> /<br><br>
+      <!--<input type="text" id="options">-->
+      <input type="submit" id="submit">
+    </div>
+
+    <div class="after pass">
+      <h2>Good job!</h2>
+      <button class="next">Next lesson</button>
+    </div>
+
+    <div class="after fail">
+      <h2>Wrong</h2>
+      <button class="again">Try again</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

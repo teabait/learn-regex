@@ -1,14 +1,77 @@
+.container {
+  padding-top: 50px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.people {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: separate;
+  border-spacing: 40px;
+}
+
+.person {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  position: relative;
+}
+
 .enemy-true {
+  background: rgba(255,0,0,.1);
   color: red;
 }
 
 .enemy-false {
+  background: rgba(0,255,0,.1);
   color: green;
 }
 
-.killed {
-  text-decoration: line-through;
+.killed:after {
+  content: '\00d7';
+  position: absolute;
+  font-size: 150px;
+  line-height: 130px;
+  width: 150px;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
 }
+
+.after {
+  border-radius: 5px;
+  padding: 20px;
+}
+.pass {
+  color: green;
+}
+.fail {
+  color: red;
+}
+
+#options {
+  width: 30px;
+}
+
+.lesson-instructions {
+  line-height: 1.5em;
+}
+
+code {
+  font-family: monospace;
+  background: #eee;
+  color: #666;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
 .flash{
   position: fixed;
   top: 0;
