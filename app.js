@@ -19,8 +19,10 @@ $(function(){
     $('.input, .lesson').hide();
     if(checkSuccess()) {
       $('.pass').show();
+      $('img').addClass('dead');
     } else {
       $('.fail').show();
+      $('img').addClass('animate');
       list.forEach(function(person){
         person.killed = false;
       })
