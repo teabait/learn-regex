@@ -64,6 +64,42 @@ var lessons = [
         img: 'monsters/monster2b'
       }
     ]
+  },
+  {
+    title: 'One more!',
+    instructions: 'Try and write a regex that matches both of these. Remember, <code>.</code> is a wildcard that will match any <i>single</i> character!',
+    people: [
+      {
+        name: 'Hlack',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster1'
+      },
+      {
+        name: 'Slacy',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster1b'
+      }
+    ]
+  },
+  {
+    title: 'Great job! Lets learn something new',
+    instructions: 'Try and write a regex that matches both of these. Remember, <code>.</code> is a wildcard that will match any <i>single</i> character!',
+    people: [
+      {
+        name: 'Hlack',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster1'
+      },
+      {
+        name: 'Slacy',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster1b'
+      }
+    ]
   }
 ];
 
