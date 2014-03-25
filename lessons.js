@@ -19,13 +19,13 @@ var lessons = [
         name: 'Zord',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1'
+        img: 'monsters/monster2'
       },
       {
         name: 'Bord',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1b'
+        img: 'monsters/monster2b'
       }
     ]
   },
@@ -37,13 +37,13 @@ var lessons = [
         name: 'Zory',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1'
+        img: 'monsters/monster3'
       },
       {
         name: 'Zora',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1b'
+        img: 'monsters/monster3b'
       }
     ]
   },

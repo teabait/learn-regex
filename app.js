@@ -56,11 +56,11 @@ $(function(){
 
     // Update progress text
     $('.progress .total').text(lessons.length);
-    $('.progress .current').text(currentLesson + 1);
+    $('.progress .current').text("Level " + (currentLesson + 1));
 
     // Update progress bar
     var width = ((currentLesson + 1) / lessons.length) * 100;
-    $('.progress .progress-inner').css('width', width + '%');
+    $('.progress .progress-inner').css('margin-left', width + '%');
     console.log(width);
   }
 
