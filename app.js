@@ -12,7 +12,8 @@ $(function(){
       if(result == person.name){
         person.killed = true;
         var oldSrc = $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src');
-        $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrc + '-dead.png');
+        var oldSrcRoot = oldSrc.match(/([^]*)\.png/);
+        $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrcRoot[1] + '-dead.png');
       }
     });
     $('.input').hide();
