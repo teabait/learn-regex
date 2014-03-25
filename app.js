@@ -16,7 +16,7 @@ $(function(){
         $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrcRoot[1] + '-dead.png');
       }
     });
-    $('.input').hide();
+    $('.input, .lesson').hide();
     if(checkSuccess()) {
       $('.pass').show();
     } else {
@@ -42,7 +42,7 @@ $(function(){
     $('.lesson-title').text(lesson.title);
     $('.lesson-instructions').html(lesson.instructions);
     $('.people').empty();
-    $('.input').show();
+    $('.input, .lesson').show();
     $('.after').hide();
     $('input[type=text]').val('');
     $('#regex').focus();
@@ -53,6 +53,15 @@ $(function(){
       el += '</li>';
       $('.people').append(el);
     });
+
+    // Update progress text
+    $('.progress .total').text(lessons.length);
+    $('.progress .current').text(currentLesson + 1);
+
+    // Update progress bar
+    var width = ((currentLesson + 1) / lessons.length) * 100;
+    $('.progress .progress-inner').css('width', width + '%');
+    console.log(width);
   }
 
   function renderNextLesson() {

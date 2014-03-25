@@ -31,7 +31,7 @@ var lessons = [
   },
   {
     title: 'Whoa, what was that!?',
-    instructions: 'Regular Expressions have <i>metacharacters</i>, with special powers. You just used <code>.</code> which is like a wildcard, that matches any <i>single</i> character. Try it again! Write a RegEx that will match both <code>Zory</code> and <code>Zora</code>',
+    instructions: 'Regular Expressions have <i>metacharacters</i>, with special powers. The one you just used (<code>.</code>) is a wildcard, that matches any <i>single</i> character. Try it again! Write a RegEx that will match both <code>Zory</code> and <code>Zora</code>',
     people: [
       {
         name: 'Zory',
