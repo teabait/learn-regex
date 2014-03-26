@@ -82,7 +82,7 @@ header {
   background: rgba(255,0,0,0.1);
 }
 .win {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -232,27 +232,18 @@ header h1:before, header h1:after {
 /* COTTER */
 
 @keyframes rain {
-  0% {margin-top: 20%;}
-  20%  {margin-top: 40%;}
-  40%  {margin-top: 60%;}
-  60%  {margin-top: 80%;}
-  80%  {margin-top: 100%;}
+  0% {margin-top: 0%;}
+  100%  {margin-top: 100%;}
 }
 
 @-webkit-keyframes rain {
-  0% {margin-top: 20%;}
-  20%  {margin-top: 40%;}
-  40%  {margin-top: 60%;}
-  60%  {margin-top: 80%;}
-  80%  {margin-top: 100%;}
+  0% {margin-top: 0%;}
+  100%  {margin-top: 100%;}
 }
 
 @-moz-keyframes rain {
-  0% {margin-top: 20%;}
-  20%  {margin-top: 40%;}
-  40%  {margin-top: 60%;}
-  60%  {margin-top: 80%;}
-  80%  {margin-top: 100%;}
+  0% {margin-top: 0%;}
+  100%  {margin-top: 100%;}
 }
 
 .crazy-checkbox {
@@ -261,9 +252,12 @@ header h1:before, header h1:after {
   width: 300px;
   color: transparent;
   background: url('monsters/cotter.png') no-repeat;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   animation: rain 1s infinite;
   -webkit-animation: rain 1s infinite;
   -moz-animation: rain 1s infinite;
+  animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-timing-function:linear;
 }
