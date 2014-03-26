@@ -9,7 +9,8 @@ var lessons = [
         killed: false,
         img: 'monsters/monster1'
       }
-    ]
+    ],
+    hint: "Remember: RegEx is case sensitive!"
   },
   {
     title: 'Nice! You just wrote your first RegEx.',
@@ -27,7 +28,8 @@ var lessons = [
         killed: false,
         img: 'monsters/monster2b'
       }
-    ]
+    ],
+    hint: "Make sure to kill both monsters!"
   },
   {
     title: 'Whoa, what was that!?',
@@ -45,7 +47,8 @@ var lessons = [
         killed: false,
         img: 'monsters/monster3b'
       }
-    ]
+    ],
+    hint: "Don't forget case sensitivity!"
   },
   {
     title: 'You\'re getting the hang of it!',
@@ -63,7 +66,8 @@ var lessons = [
         killed: false,
         img: 'monsters/monster4b'
       }
-    ]
+    ],
+    hint: "The placement of the wildcard is a little different for this one! Try again!"
   },
   {
     title: 'One more!',
@@ -81,23 +85,24 @@ var lessons = [
         killed: false,
         img: 'monsters/monster1b'
       }
-    ]
+    ],
+    hint: "The placement of the wildcard is a little different for this one! Try again!"
   },
   {
-    title: 'Great job! It\'s time to defeat the final boss!',
-    instructions: 'You\'ve battled your way to Prince Cotter. He\'s being held captive by the monsters Bolter and Holker. Match Bolter and Holker, but be sure not to hit Cotter!',
+    title: 'Great job! It\'s time to save Prince Cotter!',
+    instructions: 'Prince Cotter is being held captive by the monsters Bolter and Holker. To save Prince Cotter and win the game, defeat Bolter and Holker, but make sure not to hit the Prince!',
     people: [
       {
         name: 'Bolter',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1'
+        img: 'monsters/monster5'
       },
       {
         name: 'Holker',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1b'
+        img: 'monsters/monster5b'
       },
       {
         name: 'Cotter',
@@ -105,7 +110,8 @@ var lessons = [
         killed: false,
         img: 'monsters/cotter'
       }
-    ]
+    ],
+    hint: "Don't kill Cotter! Kill both of the monsters, though!"
   }
 ];
 

@@ -81,6 +81,15 @@ header {
   color: red;
   background: rgba(255,0,0,0.1);
 }
+.win {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: gold;
+  z-index: 100;
+}
 #options {
   width: 30px;
   display: none;
@@ -138,7 +147,7 @@ header h1:before, header h1:after {
 }
 
 /* ANIMATION */
-keyframes boom {
+@keyframes boom {
   0% {margin-right: 20px;}
   20%  {margin-right: -20px;}
   40%  {margin-right: 20px;}

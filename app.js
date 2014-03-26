@@ -3,12 +3,14 @@ $(function(){
   var currentLesson = 0;
   var transition = false;
 
-  // The thing that checks User Submission and runs everything
+  // Check User Submission
   function checkRegex(userRegex, options, list) {
-    $('.flash').show().fadeOut();
+    // $('.flash').show().fadeOut();
     var regex = new RegExp(userRegex, options);
+    // Checks to see if User input matches a creature's name
     list.forEach(function(person){
       var result = person.name.match(regex);
+      // If there's a match, mark that the creature has been killed and replace its image with dead version
       if(result == person.name){
         person.killed = true;
         var oldSrc = $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src');
@@ -20,9 +22,14 @@ $(function(){
     if(checkSuccess()) {
       $('.pass').show();
       $('img').addClass('dead');
+      // if(currentLesson === lessons.length - 1){
+      //   // $('.enemy-false').addClass('bounce');
+      // }
     } else {
+      $('.hint').text(lessons[currentLesson].hint);
       $('.fail').show();
       $('img').addClass('animate');
+      // If failed or only killed one creature, still reset all to not killed.
       list.forEach(function(person){
         person.killed = false;
       })
@@ -84,7 +91,7 @@ $(function(){
     }
   });
 
-  // Check the code when someone presses "enter"
+  // Listen for "enter" key press, and checks code
   $('input[type=text]').on('keyup', function(e){
     if (e.keyCode === 13) {
       checkRegex($('#regex').val(), $('#options').val(), lessons[currentLesson].people);
