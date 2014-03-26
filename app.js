@@ -21,10 +21,12 @@ $(function(){
     $('.input, .lesson').hide();
     if(checkSuccess()) {
       $('.pass').show();
-      $('img').addClass('dead');
-      // if(currentLesson === lessons.length - 1){
-      //   // $('.enemy-false').addClass('bounce');
-      // }
+      $('.enemy-true').addClass('dead');
+      if(currentLesson === lessons.length - 1){
+        // rainingCotter();
+        $('.win').fadeIn(1800);
+        rainingCotter();
+      }
     } else {
       $('.hint').text(lessons[currentLesson].hint);
       $('.fail').show();
@@ -98,7 +100,22 @@ $(function(){
     }
   });
 
+  function rainingCotter() {
+    var heavyRain;
+    heavyRain = setInterval(function() {
+      var fontSize, leftPercent;
+      leftPercent = Math.floor(Math.random() * 101);
+      fontSize = Math.floor(Math.random() * 151);
+      return $("body").append("<span style=\"left: " + leftPercent + "%; font-size: " + fontSize + "px;\" class=\"checkbox crazy-checkbox\">/</span>");
+    }, 6);
+    setTimeout((function() {
+      return clearInterval(heavyRain);
+    }), 2000);
+    return setTimeout((function() {
+      return $(".crazy-checkbox").remove();
+    }), 3000);
+  }
+
   // Kick off the app by rendering the first lesson
   renderLesson();
-
 });

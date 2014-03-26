@@ -1,7 +1,7 @@
 var lessons = [
   {
     title: "Learn RegEx by Slaying Monsters!",
-    instructions: '<p>Regular Expressions (RegEx, for short) are powerful weapons that let you search for patterns in text. We\'ll use them in our quest to rescue Prince Cotter to match the name of the Monsters that are holding him captive!</p><p>Defeat your first enemy by typing it\'s name, <code>Zord</code>, below.</p>',
+    instructions: '<p>Regular Expressions (RegEx, for short) are powerful weapons that let you search for patterns in text. We\'ll use them in our quest to rescue Prince Cotter to match the name of the Monsters that are holding him captive!</p><p>Defeat your first enemy by typing its name, <code>Zord</code>, below.</p>',
     people: [
       {
         name: 'Zord',
@@ -112,6 +112,56 @@ var lessons = [
       }
     ],
     hint: "Don't kill Cotter! Kill both of the monsters, though!"
+  },
+  {
+    title: 'Oh no! Captured again!',
+    instructions: 'Prince Cotter has managed to get himself tangled up with a whole new breed of beastie! These new, tougher monsters have letters and numbers in their names. Defeat the monster ZL33t to free Cotter!',
+    people: [
+      {
+        name: 'Cotter',
+        enemy: false,
+        killed: false,
+        img: 'monsters/cotter'
+      },
+      {
+        name: 'ZL33t',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster7'
+      }
+    ],
+    hint: "Don't get tripped up by the numbers! Use the skills you've already learned!"
+  },
+  {
+    title: 'Save Blish!',
+    instructions: 'Blish is a friendly monster; he can help you find your way home if you save him from P4ish and 66ish. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match numbers? Use <code>\\d</code> instead!',
+    people: [
+      {
+        name: 'Cotter',
+        enemy: false,
+        killed: false,
+        img: 'monsters/cotter'
+      },
+      {
+        name: 'Blish',
+        enemy: false,
+        killed: false,
+        img: 'monsters/friendly1'
+      },
+      {
+        name: 'P4ish',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster6'
+      },
+      {
+        name: '66ish',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster6b'
+      }
+    ],
+    hint: "Make sure you're using a backslash! And don't match the good guys!"
   }
 ];
 
