@@ -18,11 +18,11 @@ $(function(){
         $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrcRoot[1] + '-dead.png');
       }
     });
-    giveResult();
+    giveResult(list);
   }
 
   // Shows Success or Fail Message and animates creatures accordingly.
-  function giveResult() {
+  function giveResult(list) {
     $('.input, .lesson').hide();
     if(checkSuccess()) {
       $('.pass').show();
