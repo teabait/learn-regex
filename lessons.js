@@ -52,7 +52,7 @@ var lessons = [
   },
   {
     title: 'Save Blush!',
-    instructions: 'Blush is a friendly monster; he can help you find Prince Cotter if you save him from Slush and Flush. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match specific characters? You can put the characters you DO want to match inside a set of brackets, separated by a pipe. The pipe means \'Or\'.  <code>[W|P]</code> means: match the thing on the left side (W) OR the thing on the right side (P), and nothing else! <p>Destroy Slush and Flush, <strong> but spare Blush </strong></p>',
+    instructions: 'Blush is a friendly monster; he can help you find Prince Cotter if you save him from Slush and Flush. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match specific characters? You can put the characters you DO want to match inside a set of brackets, separated by a pipe. The pipe means \'Or\'.  <code>[W|P]</code> means: match the thing on the left side (W) OR the thing on the right side (P), and nothing else! <p>Destroy Slush and Flush, <strong> but spare Blush.</strong></p>',
     people: [
       {
         name: 'Blush',
@@ -123,7 +123,7 @@ var lessons = [
         img: 'monsters/cotter'
       }
     ],
-    hint: ''
+    hint: 'You still need to match the entirety of the enemy name!'
   },
   {
     title: 'Oh no! Captured again!',
