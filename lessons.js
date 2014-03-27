@@ -148,7 +148,7 @@ var lessons = [
         img: 'monsters/cotter'
       }
     ],
-    hint: 'Remember to use everything you\'ve learned!
+    hint: 'Remember to use everything you\'ve learned!'
   }
 ];
 
