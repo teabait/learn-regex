@@ -148,7 +148,7 @@ var lessons = [
         img: 'monsters/cotter'
       }
     ],
-    hint: 'Don\'t kill Cotter! Kill both of the monsters, though!'
+    hint: 'Remember to use everything you\'ve learned!
   }
 ];
 
