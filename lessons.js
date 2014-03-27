@@ -52,7 +52,7 @@ var lessons = [
   },
   {
     title: 'Save Blush!',
-    instructions: 'Blush is a friendly monster; he can help you find Prince Cotter if you save him from Slush and Flush. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match specific characters? You can put the characters you DO want to match inside a set of brackets, separated by a pipe. The pipe means \'Or\'.  <code>[S|P]</code> means: match the thing on the left side (s) OR the thing on the right side (p), and nothing else! <p>Destroy Slush and Flush, <strong> but spare Blush </strong></p>',
+    instructions: 'Blush is a friendly monster; he can help you find Prince Cotter if you save him from Slush and Flush. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match specific characters? You can put the characters you DO want to match inside a set of brackets, separated by a pipe. The pipe means \'Or\'.  <code>[W|P]</code> means: match the thing on the left side (W) OR the thing on the right side (P), and nothing else! <p>Destroy Slush and Flush, <strong> but spare Blush </strong></p>',
     people: [
       {
         name: 'Blush',
@@ -73,7 +73,7 @@ var lessons = [
         img: 'monsters/monster6b'
       }
     ],
-    hint: "Make sure you're using a backslash! And don't match the good guys!"
+    hint: "Make sure to put the specific characters you want matched within the pipe!"
   },
   {
     title: 'Great job! It\'s time to save Prince Cotter!',
@@ -104,7 +104,7 @@ var lessons = [
         img: 'monsters/friendly1c'
       }
     ],
-    hint: "Don't get tripped up by the numbers! Use the skills you've already learned!"
+    hint: 'Don\'t get tripped up by the numbers! Use your new weapon similarly to how you would use the <code>.</code>!'
   },
   {
     title: 'A mimic has appeared!',
@@ -122,7 +122,8 @@ var lessons = [
         killed: false,
         img: 'monsters/cotter'
       }
-    ]
+    ],
+    hint: ''
   },
   {
     title: 'Oh no! Captured again!',
@@ -147,7 +148,7 @@ var lessons = [
         img: 'monsters/cotter'
       }
     ],
-    hint: "Don't kill Cotter! Kill both of the monsters, though!"
+    hint: 'Don\'t kill Cotter! Kill both of the monsters, though!'
   }
 ];
 

@@ -5,9 +5,9 @@ $(function(){
 
   // Check User Submission
   function checkRegex(userRegex, options, list) {
-    // $('.flash').show().fadeOut();
     var regex = new RegExp(userRegex, options);
-    // Checks to see if User input matches a creature's name
+
+    // Checks through all creatures on a level to see if User input matches each creature's name
     list.forEach(function(person){
       var result = person.name.match(regex);
       // If there's a match, mark that the creature has been killed and replace its image with dead version
@@ -18,12 +18,17 @@ $(function(){
         $('li[data-id=' + lessons[currentLesson].people.indexOf(person) + "] img").attr('src', oldSrcRoot[1] + '-dead.png');
       }
     });
+    giveResult();
+  }
+
+  // Shows Success or Fail Message and animates creatures accordingly.
+  function giveResult() {
     $('.input, .lesson').hide();
     if(checkSuccess()) {
       $('.pass').show();
       $('.enemy-true').addClass('dead');
+      // If success on final lesson, show congratulatory message.
       if(currentLesson === lessons.length - 1){
-        // rainingCotter();
         $('.win').fadeIn(1800);
         rainingCotter();
       }
@@ -73,9 +78,9 @@ $(function(){
     $('.progress .current').text("Level " + (currentLesson + 1));
 
     // Update progress bar
-    var width = ((currentLesson + 1) / lessons.length) * 100;
-    $('.progress .progress-inner').css('margin-left', width + '%');
-    console.log(width);
+    // var width = ((currentLesson + 1) / lessons.length) * 100;
+    // $('.progress .progress-inner').css('margin-left', width + '%');
+    // console.log(width);
   }
 
   function renderNextLesson() {
@@ -86,20 +91,7 @@ $(function(){
     renderLesson();
   }
 
-  // Move on to next lesson or try again
-  $('body').on('keyup', function(e) {
-    if (transition && e.keyCode === 13) {
-      renderNextLesson();
-    }
-  });
-
-  // Listen for "enter" key press, and checks code
-  $('input[type=text]').on('keyup', function(e){
-    if (e.keyCode === 13) {
-      checkRegex($('#regex').val(), $('#options').val(), lessons[currentLesson].people);
-    }
-  });
-
+  // Cotter heads rain everywhere!
   function rainingCotter() {
     var heavyRain;
     heavyRain = setInterval(function() {
@@ -115,6 +107,20 @@ $(function(){
       return $(".crazy-checkbox").remove();
     }), 3000);
   }
+
+  // Move on to next lesson or try again
+  $('body').on('keyup', function(e) {
+    if (transition && e.keyCode === 13) {
+      renderNextLesson();
+    }
+  });
+
+  // Listen for "enter" key press, and checks code
+  $('input[type=text]').on('keyup', function(e){
+    if (e.keyCode === 13) {
+      checkRegex($('#regex').val(), $('#options').val(), lessons[currentLesson].people);
+    }
+  });
 
   // Kick off the app by rendering the first lesson
   renderLesson();
