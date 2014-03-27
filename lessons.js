@@ -51,36 +51,91 @@ var lessons = [
     hint: "Don't forget case sensitivity and be aware of the position of the wildcard."
   },
   {
-    title: 'More Monsters!',
-    instructions: 'Try and write a regex that matches both of these. Remember, <code>.</code> is a wildcard that will match any <i>single</i> character!',
+    title: 'Save Blush!',
+    instructions: 'Blush is a friendly monster; he can help you find Prince Cotter if you save him from Slush and Flush. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match specific characters? You can put the characters you DO want to match inside a set of brackets, separated by a pipe. The pipe means \'Or\'.  <code>[S|P]</code> means: match the thing on the left side (s) OR the thing on the right side (p), and nothing else! <p>Destroy Slush and Flush, <strong> but spare Blush </strong></p>',
     people: [
       {
-        name: 'Hlack',
-        enemy: true,
+        name: 'Blush',
+        enemy: false,
         killed: false,
-        img: 'monsters/monster1'
+        img: 'monsters/friendly1'
       },
       {
-        name: 'Slacy',
+        name: 'Slush',
         enemy: true,
         killed: false,
-        img: 'monsters/monster1b'
+        img: 'monsters/monster6'
+      },
+      {
+        name: 'Flush',
+        enemy: true,
+        killed: false,
+        img: 'monsters/monster6b'
       }
     ],
-    hint: "The placement of the wildcard is a little different for this one! Try again!"
+    hint: "Make sure you're using a backslash! And don't match the good guys!"
   },
   {
     title: 'Great job! It\'s time to save Prince Cotter!',
-    instructions: 'Prince Cotter is being held captive by the monsters Bolter and Holker. To save Prince Cotter and win the game, defeat Bolter and Holker, <strong>but make sure not to hit the Prince!</strong>',
+    instructions: 'Prince Cotter is being held captive by Blush\'s evil brothers: Blu5h and Blu8h. Their names are deceptively similar, but the brothers have numbers in their name. To match any single digit, use the metacharacter <code>\\d</code>. <strong>Don\'t hit the prince or Blush!</strong>',
     people: [
       {
-        name: 'Bolter',
+        name: 'Cotter',
+        enemy: false,
+        killed: false,
+        img: 'monsters/cotter'
+      },
+      {
+        name: 'Blush',
+        enemy: false,
+        killed: false,
+        img: 'monsters/friendly1'
+      },
+      {
+        name: 'Blu5h',
+        enemy: true,
+        killed: false,
+        img: 'monsters/friendly1b'
+      },
+      {
+        name: 'Blu8h',
+        enemy: true,
+        killed: false,
+        img: 'monsters/friendly1c'
+      }
+    ],
+    hint: "Don't get tripped up by the numbers! Use the skills you've already learned!"
+  },
+  {
+    title: 'A mimic has appeared!',
+    instructions: 'On your way back home, you run into Faux Cotter! You can\'t tell which prince is which by looking at them, but your regex powers know. To match Faux Cotter, make use of the metacharacter <code>\\s</code> to match the space in his name.',
+    people: [
+      {
+        name: 'Cotter',
+        enemy: false,
+        killed: false,
+        img: 'monsters/cotter'
+      },
+      {
+        name: 'Faux Cotter',
+        enemy: true,
+        killed: false,
+        img: 'monsters/cotter'
+      }
+    ]
+  },
+  {
+    title: 'Oh no! Captured again!',
+    instructions: 'Prince Cotter has been captured by the monsters Big Grek and Lil Grek. To save Prince Cotter and win the game, defeat them!',
+    people: [
+      {
+        name: 'Big Grek',
         enemy: true,
         killed: false,
         img: 'monsters/monster5'
       },
       {
-        name: 'Holker',
+        name: 'Lil Grek',
         enemy: true,
         killed: false,
         img: 'monsters/monster5b'
@@ -93,56 +148,6 @@ var lessons = [
       }
     ],
     hint: "Don't kill Cotter! Kill both of the monsters, though!"
-  },
-  {
-    title: 'Oh no! Captured again!',
-    instructions: 'Prince Cotter has managed to get himself tangled up with a whole new breed of beastie! These new, tougher monsters have letters and numbers in their names. Defeat the monster ZL33t to free Cotter! <strong>Don\'t hit the prince!</strong>',
-    people: [
-      {
-        name: 'Cotter',
-        enemy: false,
-        killed: false,
-        img: 'monsters/cotter'
-      },
-      {
-        name: 'ZL33t',
-        enemy: true,
-        killed: false,
-        img: 'monsters/monster7'
-      }
-    ],
-    hint: "Don't get tripped up by the numbers! Use the skills you've already learned!"
-  },
-  {
-    title: 'Save Blish!',
-    instructions: 'Blish is a friendly monster; he can help you find your way home if you save him from P4ish and 66ish. The metacharacter <code>.</code>\'s superpower is matching any character. But what if you only want to match numbers? Use <code>\\d</code> instead! <strong>Remember: You don\'t want to hit the good guys!</strong>',
-    people: [
-      {
-        name: 'Cotter',
-        enemy: false,
-        killed: false,
-        img: 'monsters/cotter'
-      },
-      {
-        name: 'Blish',
-        enemy: false,
-        killed: false,
-        img: 'monsters/friendly1'
-      },
-      {
-        name: 'P4ish',
-        enemy: true,
-        killed: false,
-        img: 'monsters/monster6'
-      },
-      {
-        name: '66ish',
-        enemy: true,
-        killed: false,
-        img: 'monsters/monster6b'
-      }
-    ],
-    hint: "Make sure you're using a backslash! And don't match the good guys!"
   }
 ];
 
